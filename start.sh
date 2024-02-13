@@ -7,8 +7,7 @@ rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.
 yum install -y dotnet-runtime-7.0
 
 # Build the ASP.NET Core project
-dotnet build
-dotnet watch run
+dotnet build ProgrammingQuotesApi.sln
 
 # Set up a reverse proxy using Nginx
 yum install -y nginx
@@ -30,4 +29,4 @@ server {
 }
 EOF'
 
-nohup dotnet ProgrammingQuotesApi.dll &
+nohup dotnet run &
