@@ -8,7 +8,6 @@ yum install -y dotnet-runtime-7.0
 
 # Build the ASP.NET Core project
 dotnet build
-
 dotnet watch run
 
 # Set up a reverse proxy using Nginx
@@ -31,6 +30,4 @@ server {
 }
 EOF'
 
-# Start the ASP.NET Core project
-cd ~/publish
 nohup dotnet ProgrammingQuotesApi.dll &
