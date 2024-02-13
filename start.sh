@@ -9,8 +9,7 @@ yum install -y dotnet-runtime-7.0
 # Build the ASP.NET Core project
 dotnet build
 
-# Publish the ASP.NET Core project
-dotnet publish -c Release -o ~/publish
+dotnet watch run
 
 # Set up a reverse proxy using Nginx
 yum install -y nginx
